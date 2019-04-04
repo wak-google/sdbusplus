@@ -8,7 +8,7 @@ methods:
         Multiplies two integers 'x' and 'y' and returns the result.
       parameters:
         - name: x
-          type: int64
+          type: enum[IP.Protocol]
           description: >
             The first integer to multiply.
         - name: y
@@ -26,7 +26,7 @@ methods:
         Divides two integers 'x' and 'y' and returns the result.
       parameters:
         - name: x
-          type: int64
+          type: enum[self.State]
           description: >
             The first integer to divide.
         - name: y
@@ -36,7 +36,7 @@ methods:
           default: 1
       returns:
         - name: z
-          type: int64
+          type: enum[xyz.openbmc_project.Network.IP.Protocol]
           description: >
             The result of (x/y).
       errors:
@@ -58,7 +58,7 @@ properties:
       description: >
         The current state of the Calculator.
     - name: Owner
-      type: string
+      type: enum[xyz.openbmc_project.Network.IP2.Protocol]
       description: >
         The name of the owner of the Calculator.
       errors:
@@ -69,7 +69,7 @@ signals:
         Signal indicating the LastReset property has been set to zero by the
         'Clear' method.
       properties:
-        - type: int64
+        - type: enum[xyz.openbmc_project.Network.IP3.Protocol]
           description: >
             Value of LastReset prior to Clear.
 enumerations:
